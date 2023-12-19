@@ -1,0 +1,213 @@
+body,
+html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.grid-body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+header {
+    background-color: #f0f0f0;
+    color: #333333;
+}
+
+nav {
+    display: flex;
+}
+
+
+main {
+    background-color: black;
+    grid-area: main;
+    display: flex;
+    height: 100%;
+}
+
+.content {
+    width: 100%;
+    background-color: #fff;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    padding: 10px;
+    overflow-y: auto;
+
+}
+
+article {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+aside {
+    color: #fff;
+    padding: 10px;
+    width: 300px;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-start;
+}
+
+article#home,
+article#about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+article#home h6,
+article#about h4 {
+    text-transform: uppercase;
+    color: #653f16;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin: 0%;
+}
+
+article#about h6 {
+    text-align: center;
+}
+
+article#menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+article#menu.menu-card {
+    width: 120px;
+    height: fit-content;
+
+}
+
+.menu-card>img {
+    width: 100px;
+}
+
+ul.menu-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+.menu-nav ol a {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #653f16;
+    font-weight: bold;
+}
+
+a>img {
+    width: 30px;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: 1fr;
+    padding: 25px 0 0 25px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.logo img {
+    grid-column: 1 / 2;
+    height: 60px;
+}
+
+.logo h1 {
+    grid-column: 2 / 3;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: lighter;
+    margin: 0;
+    font-size: 16px;
+    width: 80px;
+    margin-left: 25px;
+}
+
+.bold {
+    grid-column: 3 / 4;
+    text-transform: uppercase;
+    color: #653f16;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+footer {
+    background-color: #f0f0f0;
+    height: 70px;
+    display: block;
+    padding: 0 25px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+footer span {
+    color: #653f16;
+    font-weight: 400;
+}
+
+.menu-card {
+    max-height: fit-content;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(186, 186, 224, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding-bottom: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    opacity: 0.7;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.menu-card>h4,
+.menu-card>p,
+.menu-card>img,
+.menu-card>div {
+    margin: 0px;
+}
+
+button {
+    border-radius: 10px;
+}
+
+#beli {
+    padding: 2px 10px;
+    background-color: #e17a7a;
+}
+
+@media screen and (max-width: 600px) {
+    aside {
+        display: none;
+    }
+
+    ul.menu-nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+    }
+}
